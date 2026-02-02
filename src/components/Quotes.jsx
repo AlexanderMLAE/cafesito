@@ -1,27 +1,27 @@
 /* eslint-disable no-unused-vars */
 import { useCallback, useEffect, useState } from "react"
 
-function Quotes(){
+function Quotes() {
     const url = 'https://dummyjson.com/quotes'
     // HOOKS
     const [quotes, setQuotes] = useState([])
     const [loading, setLoading] = useState(true)
 
-    const getData=()=>{
+    const getData = () => {
         return fetch(url)
-        .then(res => res.json())
-        .then(console.log);
+            .then(res => res.json())
+            .then(console.log);
     }
 
-    
-    
-    useEffect(()=>{
-        getData()
-    },[])
 
-    return(
+
+    useEffect(() => {
+        getData()
+    }, [])
+
+    return (
         <>
-        <h2>Frases Listados</h2>
+            <h2>Frases Listados</h2>
         </>
     )
 }

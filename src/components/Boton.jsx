@@ -1,4 +1,4 @@
-function Boton(){
+function Boton() {
     return (
         <button className="botonsito">Erik Alexander Martinez Lopez</button>
     )
