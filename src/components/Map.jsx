@@ -8,9 +8,9 @@ import 'mapbox-gl/dist/mapbox-gl.css'
 
 const INITIAL_CENTER = [-86.84692, 21.04851]
 
-const INITIAL_ZOOM = 13 
+const INITIAL_ZOOM = 10
 
-function Map() {
+const Map = () => {
 
     const mapRef = useRef()
     const mapContainerRef = useRef()
@@ -22,13 +22,34 @@ function Map() {
         mapboxgl.accessToken = 'pk.eyJ1IjoiYWxleGFuZGVyLW1sYWUiLCJhIjoiY21sMms0c3ZlMGtkbTNkb20wZGJsajBwaCJ9.i-X4cyxRbNJn5Y5gEnpRIQ'
         mapRef.current = new mapboxgl.Map({
             container: mapContainerRef.current,
+
             center: center,
             zoom: zoom,
 
         });
-        new mapboxgl.Marker()
-            .setLngLat([12.554729, 55.70651])
-            .addTo(mapRef.current);
+        new mapboxgl.Marker({ color: 'turquoise' }) // UT
+            .setLngLat([-86.84692, 21.04851])
+            .addTo(mapRef.current)
+
+        new mapboxgl.Marker({ color: 'black' }) // Unicaribe
+            .setLngLat([-86.82379, 21.20075])
+            .addTo(mapRef.current)
+
+        new mapboxgl.Marker({ color: 'orange' }) // UPQROO
+            .setLngLat([-86.90669, 21.18105])
+            .addTo(mapRef.current)
+
+        new mapboxgl.Marker({ color: 'green' }) // UQROO
+            .setLngLat([-86.92745, 21.16124])
+            .addTo(mapRef.current)
+
+        new mapboxgl.Marker({ color: 'blue' }) // TECNOLOGICO
+            .setLngLat([-86.83540119815054, 21.13848011409221])
+            .addTo(mapRef.current)
+        
+        new mapboxgl.Marker({ color: 'teal' }) // Yo
+            .setLngLat([-86.84602, 21.04591])
+            .addTo(mapRef.current)
 
         mapRef.current.on('move', () => {
             // get the current center coordinates and zoom level from the map
