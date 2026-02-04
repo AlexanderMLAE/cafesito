@@ -30,10 +30,9 @@
 }
 
 .reset-button {
-  position: absolute;
-  top: 180px;
+  top: 0;
+  left: 0;
   z-index: 1;
-  left: 500px;
   padding: 4px 10px;
   border-radius: 10px;
   border-style: solid;
