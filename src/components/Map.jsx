@@ -72,7 +72,7 @@ const Map = () => {
             zoom: INITIAL_ZOOM
         })
     }
-
+// TODO: Wrap inside a map container
     return (
         <>
             <div className="sidebar">
