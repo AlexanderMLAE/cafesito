@@ -9,7 +9,7 @@ function Login() {
         e.preventDefault();
         if (user.trim().length > 2) {
             localStorage.setItem("trainer_current", user);
-            navigate("/pokedex");
+            Navigate("/pokedex");
         } else {
             alert('El nombre del entrenador debe tener al menos 3 letras');
         }
@@ -32,3 +32,5 @@ function Login() {
         </div>
     )
 }
+
+export default Login

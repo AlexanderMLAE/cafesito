@@ -11,7 +11,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Login/>} />
           <Route path='/pokedex' element={<Pokedex/>} />
-          <Route path='*' element={<Navigate to='/'/>} />
+          <Route path='*' element={<Navigate to='/login'/>} />
         </Routes>
       </BrowserRouter>
   )
