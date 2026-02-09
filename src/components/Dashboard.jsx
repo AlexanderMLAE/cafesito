@@ -26,10 +26,11 @@ function Dashboard() {
 
 	return (
 		<>
-			<h1>Dashboard</h1>
-			{loading ? <img src="https://www.drupal.org/files/issues/throbber_12.gif" /> : (
+		
+			<h1>Quotes:</h1>
+			{loading ? <img src="https://c.tenor.com/6oKfSmPfTW0AAAAd/tenor.gif"
+			/> : (
 				<>
-					<p>Mostrando datos</p>
 					{
 						quotes.map(
 							item => (
