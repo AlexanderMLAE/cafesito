@@ -14,7 +14,7 @@ function Pokedex() {
 
     return (
         <>
-        <h1>Bienvenido {trainerName}</h1>
+        <h1 id="welcome">Bienvenido {trainerName}</h1>
         <Dashboard></Dashboard>
         </>
     )
