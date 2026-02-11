@@ -66,7 +66,6 @@ function Pokedex() {
                 </div>
             )}
             </div>
-            <Dashboard></Dashboard>
             </>
         )
 

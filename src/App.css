@@ -10,12 +10,12 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  background-color: #121212;
 }
 
 body {
-  background-image: 'src/assets/charizard.png';
-  background-repeat: repeat;
+  background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/refs/heads/master/sprites/pokemon/versions/generation-iii/firered-leafgreen/6.png');
+  background-attachment: fixed ;
+  background-color: #121212;
 }
 
 #map-container {

@@ -1,4 +1,5 @@
 import axios from "axios";
+import Pokedex from "../pages/Pokedex";
 import { useEffect, useState } from "react";
 function Dashboard() {
     const url = "https://dummyjson.com/quotes";
@@ -60,28 +61,25 @@ function Dashboard() {
                     </div>
                 </div>
 
-                <div class="flex flex-col flex-1 overflow-y-auto border-5 bg-[#121212] border-black">
+                <div class="flex flex-col flex-1 overflow-y-auto border-5 bg-[#084152] border-black">
                     <div class="p-4">
                         <div className="grid grid-cols-3 gap-20 pb-25 pl-5 pr-5">
-                            <div className="border border-black">
-                                <h1 className="text-5xl font-bold">30</h1>
+                            <div className="rounded-md bg-[#eede7b] text-black font-bold">
+                                <h1 className="text-5xl">30</h1>
                                 Capturados
                             </div>
-                            <div className="border border-black">
+                            <div className="rounded-md bg-[#eede7b] text-black font-bold">
                                 <h1 className="text-5xl font-bold">10</h1>
                                 Liberados
                             </div>
-                            <div className="border border-black">
+                            <div className="rounded-md bg-[#eede7b] text-black font-bold">
                                 <h1 className="text-5xl font-bold">5</h1>
                                 Categorias
                             </div>
                         </div>
                         <div className="grid grid-cols-2 gap-10">
                                 <div className="border border-black">
-                                    <form>
-                                        <p className="text-2xl font-bold">Buscador de Pokemon</p>
-                                        <input type="text" placeholder="Dragonite" />
-                                    </form>
+                                        <Pokedex></Pokedex>
                                 </div>
                                 <div className="border border-black">
                                     <h1>Mapa</h1>

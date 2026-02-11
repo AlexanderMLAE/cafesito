@@ -15,7 +15,7 @@ function Login() {
         }
     };
     return (
-        <div className="text-white border-2 border-white rounded-md">
+        <div className="text-white border-2 border-white rounded-md bg-[#121212]">
             <div className="login-card">
                 <h1>Sistema de Gestión de Pokemones</h1>
                 <p>Identificate, entrenador</p>
