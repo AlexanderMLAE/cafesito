@@ -26,7 +26,9 @@ function Dashboard() {
             <div class="flex h-screen bg-gray-300 border border-red-500 text-white">
                 <div class="hidden md:flex flex-col w-64 bg-gray-800 border border-blue-500">
                     <div class="flex items-center justify-center h-16 bg-gray-800 border border-yellow-500">
-                        <span class="text-white font-bold uppercase">Icono</span>
+                        <span class="text-white font-bold uppercase">
+                            <img src="src/assets/charmander.gif" alt="animated charmander" />
+                        </span>
                     </div>
                     <div class="flex flex-col flex-1 overflow-y-auto border border-green-500">
                         <nav class="flex-1 px-2 py-4 bg-gray-800 border border-white">

@@ -15,7 +15,7 @@ function Login() {
         }
     };
     return (
-        <div className="login-container">
+        <div className="text-white border-2 border-white rounded-md">
             <div className="login-card">
                 <h1>Sistema de Gestión de Pokemones</h1>
                 <p>Identificate, entrenador</p>

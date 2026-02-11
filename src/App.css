@@ -13,6 +13,11 @@
   background-color: #121212;
 }
 
+body {
+  background-image: 'src/assets/charizard.png';
+  background-repeat: repeat;
+}
+
 #map-container {
   height: 100%;
   width: 100%;
@@ -88,4 +93,8 @@
 Dashboard {
   border: 5px solid blue;
   
+}
+
+#login-container {
+  font-weight: bold;
 }
