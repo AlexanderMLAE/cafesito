@@ -28,7 +28,7 @@ function Dashboard() {
 		<>
 		
 			<h1>Quotes:</h1>
-			{loading ? <img src="https://c.tenor.com/6oKfSmPfTW0AAAAd/tenor.gif"
+			{loading ? <img id="foxy" src="src/assets/foxy.gif"
 			/> : (
 				<>
 					{
