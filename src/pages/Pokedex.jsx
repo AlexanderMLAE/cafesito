@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import Dashboard from "../components/Dashboard";
 
 function Pokedex() {
-    
+
     const [trainerName, setTrainerName] = useState('');
 
     useEffect(() => {
@@ -14,7 +14,7 @@ function Pokedex() {
 
     return (
         <>
-        <h1 id="welcome">Bienvenido {trainerName}</h1>
+        <h1 className="text-white text-2xl font-bold pb-8 border border-white">Bienvenido {trainerName}</h1>
         <Dashboard></Dashboard>
         </>
     )

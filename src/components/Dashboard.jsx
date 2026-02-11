@@ -1,99 +1,96 @@
-import axios from "axios"
-import { useEffect, useState } from "react"
+import axios from "axios";
+import { useEffect, useState } from "react";
 function Dashboard() {
-	const url = 'https://dummyjson.com/quotes'
-	// HOOKS
-	const [quotes, setQuotes] = useState([])
-	const [loading, setLoading] = useState(true)
-	// INVOCAR EL SERVICIO
-	const getQuotes = async () => {
-		try {
-			const result = await axios.get(url)
-			console.log(result.data.quotes)
-			setQuotes(result.data.quotes)
-			setLoading(false)
-		}
-		catch (error) {
-			console.error("Error al solicitar los datos", error)
-			setLoading(true)
+    const url = "https://dummyjson.com/quotes";
+    // HOOKS
+    const [quotes, setQuotes] = useState([]);
+    const [loading, setLoading] = useState(true);
+    // INVOCAR EL SERVICIO
+    const getQuotes = async () => {
+        try {
+            const result = await axios.get(url);
+            console.log(result.data.quotes);
+            setQuotes(result.data.quotes);
+            setLoading(false);
+        } catch (error) {
+            console.error("Error al solicitar los datos", error);
+            setLoading(true);
+        }
+    };
+    useEffect(() => {
+        getQuotes();
+    }, []);
 
-		}
-	}
-	useEffect(() => {
-		getQuotes()
-	}, [])
+    return (
+        <>
+            <div class="flex h-screen bg-gray-300 border border-red-500 text-white">
+                <div class="hidden md:flex flex-col w-64 bg-gray-800 border border-blue-500">
+                    <div class="flex items-center justify-center h-16 bg-gray-800 border border-yellow-500">
+                        <span class="text-white font-bold uppercase">Icono</span>
+                    </div>
+                    <div class="flex flex-col flex-1 overflow-y-auto border border-green-500">
+                        <nav class="flex-1 px-2 py-4 bg-gray-800 border border-white">
+                            <a
+                                href="#"
+                                class="flex items-center px-4 py-2 text-gray-100 hover:bg-gray-700"
+                            >
+                                Dashboard
+                            </a>
+                            <a
+                                href="#"
+                                class="flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700"
+                            >
+                                Pokemones
+                            </a>
+                            <a
+                                href="#"
+                                class="flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700"
+                            >
+                                Mapa
+                            </a>
+                            <a
+                                href="#"
+                                class="flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700"
+                            >
+                                Configuracion
+                            </a>
+                        </nav>
+                    </div>
+                </div>
 
-	return (
-		<>
-		<div class="flex h-screen bg-gray-100">
-
-    <div class="hidden md:flex flex-col w-64 bg-gray-800">
-        <div class="flex items-center justify-center h-16 bg-gray-900">
-            <span class="text-white font-bold uppercase">Icono</span>
-        </div>
-        <div class="flex flex-col flex-1 overflow-y-auto">
-            <nav class="flex-1 px-2 py-4 bg-gray-800">
-                <a href="#" class="flex items-center px-4 py-2 text-gray-100 hover:bg-gray-700">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                    Dashboard
-                </a>
-                <a href="#" class="flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                    Messages
-                </a>
-                <a href="#" class="flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                    Settings
-                </a>
-            </nav>
-        </div>
-    </div>
-
-    <div class="flex flex-col flex-1 overflow-y-auto">
-        <div class="flex items-center justify-between h-16 bg-white border-b border-gray-200">
-            <div class="flex items-center px-4">
-                <button class="text-gray-500 focus:outline-none focus:text-gray-700">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
-                <input class="mx-4 w-full border rounded-md px-4 py-2" type="text" placeholder="Search"/>
+                <div class="flex flex-col flex-1 overflow-y-auto border-5 bg-[#121212] border-black">
+                    <div class="p-4">
+                        <div className="grid grid-cols-3 gap-20 pb-25 pl-5 pr-5">
+                            <div className="border border-black">
+                                <h1 className="text-5xl font-bold">30</h1>
+                                Capturados
+                            </div>
+                            <div className="border border-black">
+                                <h1 className="text-5xl font-bold">10</h1>
+                                Liberados
+                            </div>
+                            <div className="border border-black">
+                                <h1 className="text-5xl font-bold">5</h1>
+                                Categorias
+                            </div>
+                        </div>
+                        <div className="grid grid-cols-2 gap-10">
+                                <div className="border border-black">
+                                    <form>
+                                        <p className="text-2xl font-bold">Buscador de Pokemon</p>
+                                        <input type="text" placeholder="Dragonite" />
+                                    </form>
+                                </div>
+                                <div className="border border-black">
+                                    <h1>Mapa</h1>
+                                    <img src="src/assets/kanto.png" alt="mapa de kanto" className="p-5" />
+                                </div>
+                            </div>
+                    </div>
+                </div>
             </div>
-            <div class="flex items-center pr-4">
-
-                <button
-                    class="flex items-center text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M12 19l-7-7 7-7m5 14l7-7-7-7" />
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <div class="p-4">
-            <h1 class="text-2xl font-bold">Welcome to my dashboard!</h1>
-            <p class="mt-2 text-gray-600">This is an example dashboard using Tailwind CSS.</p>
-        </div>
-    </div>
-    
-</div>
-		</>
-	)
+        </>
+    );
 }
 
-export default Dashboard
+export default Dashboard;
