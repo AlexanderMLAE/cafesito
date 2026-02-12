@@ -44,11 +44,11 @@ function Pokedex() {
 
         return (
             <>
-            <h1 className="text-white text-2xl font-bold pb-8 border border-white">Bienvenido {trainer}</h1>
-            <div className="text-white">
+            <h1 className="text-black text-2xl font-bold pb-8">Bienvenido {trainer}</h1>
+            <div className="text-black">
             <h3>Buscador de pokemones</h3>
             <form onSubmit={searchPokemon}>
-                <input 
+                <input className="rounded-md text-black"
                     value={search}
                     onChange={e => setSearch(e.target.value)}
                     placeholder="Blaziken"
@@ -62,7 +62,7 @@ function Pokedex() {
                 <div className="pokemon-card new-find">
                     <img src={pokemonFound.pokemon_image} alt="sprite" />
                     <h3>{pokemonFound.pokemon_name.toUpperCase()}</h3>
-                    <p>Tipo: {pokemonFound.pokemon_type}</p>
+                    <p>Tipo: {pokemonFound.pokemon_type.toUpperCase()}</p>
                 </div>
             )}
             </div>
