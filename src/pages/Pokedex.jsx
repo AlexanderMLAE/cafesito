@@ -33,6 +33,7 @@ function Pokedex() {
                 pokemon_name: response.data.name,
                 pokemon_image: response.data.sprites.front_default,
                 pokemon_type: response.data.types[0].type.name,
+                pokemon_type2: response.data.types[1]?.type.name,
                 pokemon_id: response.data.id
             });
         } catch (error) {
@@ -62,7 +63,7 @@ function Pokedex() {
                 <div className="pokemon-card new-find">
                     <img src={pokemonFound.pokemon_image} alt="sprite" className="mx-auto"/>
                     <h3>{pokemonFound.pokemon_name.toUpperCase()}</h3>
-                    <p>Tipo: {pokemonFound.pokemon_type.toUpperCase()}</p>
+                    <p>Tipo: {pokemonFound.pokemon_type.toUpperCase()} {pokemonFound.pokemon_type2}</p>
                 </div>
             )}
             </div>

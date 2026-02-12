@@ -24,8 +24,8 @@ function Dashboard() {
 
     return (
         <>
-            <div class="flex h-screen text-black border-2 border-white">
-                <div class="hidden md:flex flex-col w-64 bg-gray-800">
+            <div class="flex h-screen text-black font-bold border-2 border-white">
+                <div class="hidden md:flex flex-col w-64">
                     <div class="flex items-center justify-center h-16 bg-[#063847]">
                         <span class="text-black font-bold uppercase">
                             <img src="src/assets/charmander.gif" alt="animated charmander" />
@@ -64,24 +64,24 @@ function Dashboard() {
                 <div class="flex flex-col flex-1 overflow-y-auto bg-[#084152] ">
                     <div class="p-4">
                         <div className="grid grid-cols-3 gap-20 mb-25 rounded-md p-3 bg-[#cd5241]">
-                            <div className="rounded-md bg-[#eede7b] text-black font-bold drop-shadow-xl/50">
+                            <div className="rounded-md bg-[#eede7b] drop-shadow-xl/50">
                                 <h1 className="text-5xl">30</h1>
                                 Capturados
                             </div>
-                            <div className="rounded-md bg-[#eede7b] text-black font-bold drop-shadow-xl/50">
+                            <div className="rounded-md bg-[#eede7b] drop-shadow-xl/50">
                                 <h1 className="text-5xl font-bold">10</h1>
                                 Liberados
                             </div>
-                            <div className="rounded-md bg-[#eede7b] text-black font-bold drop-shadow-xl/50">
+                            <div className="rounded-md bg-[#eede7b] drop-shadow-xl/50">
                                 <h1 className="text-5xl font-bold">5</h1>
                                 Categorias
                             </div>
                         </div>
                         <div className="grid grid-cols-2 gap-10 rounded-md bg-[#ee8329] p-5">
-                                <div className="rounded-md bg-[#eede7b] text-black font-bold drop-shadow-xl/50">
+                                <div className="rounded-md bg-[#eede7b] drop-shadow-xl/50">
                                         <Pokedex></Pokedex>
                                 </div>
-                                <div className="rounded-md bg-[#eede7b] text-black font-bold drop-shadow-xl/50">
+                                <div className="rounded-md bg-[#eede7b] drop-shadow-xl/50">
                                     <h1>Mapa</h1>
                                     <img src="src/assets/kanto.png" alt="mapa de kanto" className="p-5" />
                                 </div>
